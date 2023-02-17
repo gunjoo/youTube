@@ -14,7 +14,7 @@ print('>>> API key 설정')
 # 유튜브 모든 채널에는 'Uploads'라는 기본 채널이 있음
 # 해당 채널 ID를 가져온 뒤에, 해당 Uploads의 리스트를 다시 호출해오는 함수
 
-# 유튜브 데이터느 매일 변경됨. 오늘 날짜를 Last_update로 기록하기 위해 Datetime을 사용
+# 유튜브 데이터는 매일 변경됨. 오늘 날짜를 Last_update로 기록하기 위해 Datetime을 사용
 today = datetime.datetime.now()
 nowDate = today.strftime('%Y-%m-%d')
 
@@ -125,6 +125,7 @@ vidurl_list = []
 
 for i in range(len(videoid_list)):
     vidurl = vidurl_prefix + videoid_list[i]
+
     vidurl_list.append(vidurl)
 
 # Google API의 응답은 UTC를 기준으로 한다. KST로 변환이 필요하며, KST는 UTC+9이다.
