@@ -165,3 +165,4 @@ print('>>> 작업이 완료되었습니다.')
 filename = channel_title + '_' + today.strftime('%Y%m%d') + '.csv'
 sum_df.to_csv(filename, encoding='utf-8-sig', index=False)
 print('결과물: ', filename)
+
